@@ -74,7 +74,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
             self.player!.play()
             print("1 秒后输出")
             while(true){
-                sleep(10)
+                sleep(8)
                 //定位
                 //                self.locationManager.delegate = self
                 //                self.locationManager.desiredAccuracy = kCLLocationAccuracyBest

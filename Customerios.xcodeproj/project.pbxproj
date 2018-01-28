@@ -8,19 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		0502C1AD201D93CB009A78B8 /* Countdownnote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0502C194201D93CB009A78B8 /* Countdownnote.swift */; };
-		0502C1AE201D93CB009A78B8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0502C195201D93CB009A78B8 /* ViewController.swift */; };
 		0502C1AF201D93CB009A78B8 /* AlipaySDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0502C196201D93CB009A78B8 /* AlipaySDK.bundle */; };
 		0502C1B0201D93CB009A78B8 /* silence.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0502C198201D93CB009A78B8 /* silence.mp3 */; };
 		0502C1B1201D93CB009A78B8 /* corporatelogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 0502C199201D93CB009A78B8 /* corporatelogo.png */; };
 		0502C1B2201D93CB009A78B8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0502C19A201D93CB009A78B8 /* Assets.xcassets */; };
-		0502C1B3201D93CB009A78B8 /* Messagenote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0502C19B201D93CB009A78B8 /* Messagenote.swift */; };
 		0502C1B4201D93CB009A78B8 /* CreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0502C19C201D93CB009A78B8 /* CreateViewController.swift */; };
 		0502C1B5201D93CB009A78B8 /* ScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0502C19D201D93CB009A78B8 /* ScanViewController.swift */; };
 		0502C1B6201D93CB009A78B8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0502C19E201D93CB009A78B8 /* LaunchScreen.storyboard */; };
 		0502C1B7201D93CB009A78B8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0502C1A0201D93CB009A78B8 /* Main.storyboard */; };
-		0502C1B8201D93CB009A78B8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0502C1A3201D93CB009A78B8 /* AppDelegate.swift */; };
 		0502C1B9201D93CB009A78B8 /* Customerios.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0502C1A4201D93CB009A78B8 /* Customerios.xcdatamodeld */; };
-		0502C1BA201D93CB009A78B8 /* Notificationfunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0502C1A6201D93CB009A78B8 /* Notificationfunction.swift */; };
 		0502C1BB201D93CB009A78B8 /* AVCaptureSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0502C1A8201D93CB009A78B8 /* AVCaptureSessionManager.swift */; };
 		0502C1BC201D93CB009A78B8 /* UIImage+ZZYQRCodeImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0502C1A9201D93CB009A78B8 /* UIImage+ZZYQRCodeImage.swift */; };
 		0502C1BD201D93CB009A78B8 /* ZZYQRCode.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0502C1AA201D93CB009A78B8 /* ZZYQRCode.bundle */; };
@@ -31,16 +27,10 @@
 		05AED2DB200F357100D434BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05AED2DA200F357100D434BD /* AppDelegate.swift */; };
 		05AED2DD200F357100D434BD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05AED2DC200F357100D434BD /* ViewController.swift */; };
 		05AED2E0200F357100D434BD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05AED2DE200F357100D434BD /* Main.storyboard */; };
-		05AED2E3200F357100D434BD /* Customerios.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 05AED2E1200F357100D434BD /* Customerios.xcdatamodeld */; };
 		05AED2E5200F357100D434BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05AED2E4200F357100D434BD /* Assets.xcassets */; };
 		05AED2E8200F357100D434BD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05AED2E6200F357100D434BD /* LaunchScreen.storyboard */; };
-		05AED2F8200F357100D434BD /* AVCaptureSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05AED2F5200F357100D434BD /* AVCaptureSessionManager.swift */; };
-		05AED2F9200F357100D434BD /* UIImage+ZZYQRCodeImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05AED2F6200F357100D434BD /* UIImage+ZZYQRCodeImage.swift */; };
 		05AED2FA200F357100D434BD /* ZZYQRCode.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 05AED2F7200F357100D434BD /* ZZYQRCode.bundle */; };
 		05AED302200F357100D434BD /* Notificationfunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05AED2FD200F357100D434BD /* Notificationfunction.swift */; };
-		05AED303200F357100D434BD /* CreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05AED2FE200F357100D434BD /* CreateViewController.swift */; };
-		05AED304200F357100D434BD /* ScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05AED2FF200F357100D434BD /* ScanViewController.swift */; };
-		05AED305200F357100D434BD /* Countdownnote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05AED300200F357100D434BD /* Countdownnote.swift */; };
 		05AED306200F357100D434BD /* Messagenote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05AED301200F357100D434BD /* Messagenote.swift */; };
 		05AED308200F357100D434BD /* AlipaySDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 05AED307200F357100D434BD /* AlipaySDK.bundle */; };
 		05F8808F200FB6570008C0EE /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05F8808E200FB6570008C0EE /* SystemConfiguration.framework */; };
@@ -103,6 +93,7 @@
 		05AED300200F357100D434BD /* Countdownnote.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Countdownnote.swift; sourceTree = "<group>"; };
 		05AED301200F357100D434BD /* Messagenote.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Messagenote.swift; sourceTree = "<group>"; };
 		05AED307200F357100D434BD /* AlipaySDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AlipaySDK.bundle; sourceTree = "<group>"; };
+		05BE5462201DA7C700D5D56B /* Customerios.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Customerios.entitlements; sourceTree = "<group>"; };
 		05F8808E200FB6570008C0EE /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		05F88090200FB66D0008C0EE /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		05F88093200FB6960008C0EE /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
@@ -210,6 +201,7 @@
 		05AED2D9200F357100D434BD /* Customerios */ = {
 			isa = PBXGroup;
 			children = (
+				05BE5462201DA7C700D5D56B /* Customerios.entitlements */,
 				059BF544200F1FEC0058F057 /* corporatelogo.png */,
 				059BF542200F1EAE0058F057 /* silence.mp3 */,
 				05AED307200F357100D434BD /* AlipaySDK.bundle */,
@@ -298,6 +290,9 @@
 							com.apple.BackgroundModes = {
 								enabled = 1;
 							};
+							com.apple.Push = {
+								enabled = 1;
+							};
 						};
 					};
 				};
@@ -356,7 +351,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0502C1BA201D93CB009A78B8 /* Notificationfunction.swift in Sources */,
 				0502C1AD201D93CB009A78B8 /* Countdownnote.swift in Sources */,
 				05AED302200F357100D434BD /* Notificationfunction.swift in Sources */,
 				0502C1B5201D93CB009A78B8 /* ScanViewController.swift in Sources */,
@@ -364,18 +358,9 @@
 				0502C1B4201D93CB009A78B8 /* CreateViewController.swift in Sources */,
 				0502C1BB201D93CB009A78B8 /* AVCaptureSessionManager.swift in Sources */,
 				05AED2DD200F357100D434BD /* ViewController.swift in Sources */,
-				05AED303200F357100D434BD /* CreateViewController.swift in Sources */,
 				05AED2DB200F357100D434BD /* AppDelegate.swift in Sources */,
-				05AED2F8200F357100D434BD /* AVCaptureSessionManager.swift in Sources */,
-				0502C1B8201D93CB009A78B8 /* AppDelegate.swift in Sources */,
-				0502C1AE201D93CB009A78B8 /* ViewController.swift in Sources */,
 				0502C1BC201D93CB009A78B8 /* UIImage+ZZYQRCodeImage.swift in Sources */,
 				05AED306200F357100D434BD /* Messagenote.swift in Sources */,
-				05AED2F9200F357100D434BD /* UIImage+ZZYQRCodeImage.swift in Sources */,
-				05AED305200F357100D434BD /* Countdownnote.swift in Sources */,
-				05AED2E3200F357100D434BD /* Customerios.xcdatamodeld in Sources */,
-				0502C1B3201D93CB009A78B8 /* Messagenote.swift in Sources */,
-				05AED304200F357100D434BD /* ScanViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -528,6 +513,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_CXX_LIBRARY = "libstdc++";
+				CODE_SIGN_ENTITLEMENTS = Customerios/Customerios.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Y683GGLLBM;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -535,11 +522,13 @@
 					"$(PROJECT_DIR)/Customerios",
 					"$(PROJECT_DIR)",
 				);
+				GCC_OPTIMIZATION_LEVEL = 0;
 				INFOPLIST_FILE = Customerios/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jd.Customerios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				"SWIFT_OBJC_BRIDGING_HEADER[arch=*]" = /Users/jiangdong/Desktop/iosapp/Customerios/Customerios/bridge.h;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -549,6 +538,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_CXX_LIBRARY = "libstdc++";
+				CODE_SIGN_ENTITLEMENTS = Customerios/Customerios.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Y683GGLLBM;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -556,11 +547,13 @@
 					"$(PROJECT_DIR)/Customerios",
 					"$(PROJECT_DIR)",
 				);
+				GCC_OPTIMIZATION_LEVEL = 0;
 				INFOPLIST_FILE = Customerios/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jd.Customerios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				"SWIFT_OBJC_BRIDGING_HEADER[arch=*]" = /Users/jiangdong/Desktop/iosapp/Customerios/Customerios/bridge.h;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
