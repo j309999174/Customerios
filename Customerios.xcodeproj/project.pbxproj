@@ -7,6 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0502C1AD201D93CB009A78B8 /* Countdownnote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0502C194201D93CB009A78B8 /* Countdownnote.swift */; };
+		0502C1AE201D93CB009A78B8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0502C195201D93CB009A78B8 /* ViewController.swift */; };
+		0502C1AF201D93CB009A78B8 /* AlipaySDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0502C196201D93CB009A78B8 /* AlipaySDK.bundle */; };
+		0502C1B0201D93CB009A78B8 /* silence.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0502C198201D93CB009A78B8 /* silence.mp3 */; };
+		0502C1B1201D93CB009A78B8 /* corporatelogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 0502C199201D93CB009A78B8 /* corporatelogo.png */; };
+		0502C1B2201D93CB009A78B8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0502C19A201D93CB009A78B8 /* Assets.xcassets */; };
+		0502C1B3201D93CB009A78B8 /* Messagenote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0502C19B201D93CB009A78B8 /* Messagenote.swift */; };
+		0502C1B4201D93CB009A78B8 /* CreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0502C19C201D93CB009A78B8 /* CreateViewController.swift */; };
+		0502C1B5201D93CB009A78B8 /* ScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0502C19D201D93CB009A78B8 /* ScanViewController.swift */; };
+		0502C1B6201D93CB009A78B8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0502C19E201D93CB009A78B8 /* LaunchScreen.storyboard */; };
+		0502C1B7201D93CB009A78B8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0502C1A0201D93CB009A78B8 /* Main.storyboard */; };
+		0502C1B8201D93CB009A78B8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0502C1A3201D93CB009A78B8 /* AppDelegate.swift */; };
+		0502C1B9201D93CB009A78B8 /* Customerios.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0502C1A4201D93CB009A78B8 /* Customerios.xcdatamodeld */; };
+		0502C1BA201D93CB009A78B8 /* Notificationfunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0502C1A6201D93CB009A78B8 /* Notificationfunction.swift */; };
+		0502C1BB201D93CB009A78B8 /* AVCaptureSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0502C1A8201D93CB009A78B8 /* AVCaptureSessionManager.swift */; };
+		0502C1BC201D93CB009A78B8 /* UIImage+ZZYQRCodeImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0502C1A9201D93CB009A78B8 /* UIImage+ZZYQRCodeImage.swift */; };
+		0502C1BD201D93CB009A78B8 /* ZZYQRCode.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0502C1AA201D93CB009A78B8 /* ZZYQRCode.bundle */; };
+		0502C1BE201D93CB009A78B8 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0502C1AB201D93CB009A78B8 /* Info.plist */; };
+		0502C1BF201D93CB009A78B8 /* AlipaySDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0502C1AC201D93CB009A78B8 /* AlipaySDK.framework */; };
 		059BF543200F1EAE0058F057 /* silence.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 059BF542200F1EAE0058F057 /* silence.mp3 */; };
 		059BF545200F1FEC0058F057 /* corporatelogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 059BF544200F1FEC0058F057 /* corporatelogo.png */; };
 		05AED2DB200F357100D434BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05AED2DA200F357100D434BD /* AppDelegate.swift */; };
@@ -39,6 +58,28 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0502C190201D93CB009A78B8 /* Customerios.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = Customerios.xcodeproj; sourceTree = "<group>"; };
+		0502C194201D93CB009A78B8 /* Countdownnote.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Countdownnote.swift; sourceTree = "<group>"; };
+		0502C195201D93CB009A78B8 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0502C196201D93CB009A78B8 /* AlipaySDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AlipaySDK.bundle; sourceTree = "<group>"; };
+		0502C197201D93CB009A78B8 /* bridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bridge.h; sourceTree = "<group>"; };
+		0502C198201D93CB009A78B8 /* silence.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = silence.mp3; sourceTree = "<group>"; };
+		0502C199201D93CB009A78B8 /* corporatelogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = corporatelogo.png; sourceTree = "<group>"; };
+		0502C19A201D93CB009A78B8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0502C19B201D93CB009A78B8 /* Messagenote.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Messagenote.swift; sourceTree = "<group>"; };
+		0502C19C201D93CB009A78B8 /* CreateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateViewController.swift; sourceTree = "<group>"; };
+		0502C19D201D93CB009A78B8 /* ScanViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScanViewController.swift; sourceTree = "<group>"; };
+		0502C19F201D93CB009A78B8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		0502C1A1201D93CB009A78B8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		0502C1A2201D93CB009A78B8 /* ZZYQRCodeSwift-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ZZYQRCodeSwift-Bridging-Header.h"; sourceTree = "<group>"; };
+		0502C1A3201D93CB009A78B8 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		0502C1A5201D93CB009A78B8 /* Customerios.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Customerios.xcdatamodel; sourceTree = "<group>"; };
+		0502C1A6201D93CB009A78B8 /* Notificationfunction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notificationfunction.swift; sourceTree = "<group>"; };
+		0502C1A8201D93CB009A78B8 /* AVCaptureSessionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AVCaptureSessionManager.swift; sourceTree = "<group>"; };
+		0502C1A9201D93CB009A78B8 /* UIImage+ZZYQRCodeImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+ZZYQRCodeImage.swift"; sourceTree = "<group>"; };
+		0502C1AA201D93CB009A78B8 /* ZZYQRCode.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ZZYQRCode.bundle; sourceTree = "<group>"; };
+		0502C1AB201D93CB009A78B8 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0502C1AC201D93CB009A78B8 /* AlipaySDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AlipaySDK.framework; sourceTree = "<group>"; };
 		059BF542200F1EAE0058F057 /* silence.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = silence.mp3; sourceTree = "<group>"; };
 		059BF544200F1FEC0058F057 /* corporatelogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = corporatelogo.png; sourceTree = "<group>"; };
 		05AED2D7200F357100D434BD /* Customerios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Customerios.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -89,6 +130,7 @@
 				05F88095200FB6A20008C0EE /* CoreGraphics.framework in Frameworks */,
 				05F88094200FB6960008C0EE /* CoreMotion.framework in Frameworks */,
 				05F88092200FB6800008C0EE /* CoreText.framework in Frameworks */,
+				0502C1BF201D93CB009A78B8 /* AlipaySDK.framework in Frameworks */,
 				05F88091200FB66D0008C0EE /* CoreTelephony.framework in Frameworks */,
 				05F8808F200FB6570008C0EE /* SystemConfiguration.framework in Frameworks */,
 			);
@@ -97,10 +139,61 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0502C18F201D93CB009A78B8 /* Customerios */ = {
+			isa = PBXGroup;
+			children = (
+				0502C190201D93CB009A78B8 /* Customerios.xcodeproj */,
+				0502C193201D93CB009A78B8 /* Customerios */,
+				0502C1AC201D93CB009A78B8 /* AlipaySDK.framework */,
+			);
+			name = Customerios;
+			sourceTree = "<group>";
+		};
+		0502C191201D93CB009A78B8 /* Products */ = {
+			isa = PBXGroup;
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0502C193201D93CB009A78B8 /* Customerios */ = {
+			isa = PBXGroup;
+			children = (
+				0502C194201D93CB009A78B8 /* Countdownnote.swift */,
+				0502C195201D93CB009A78B8 /* ViewController.swift */,
+				0502C196201D93CB009A78B8 /* AlipaySDK.bundle */,
+				0502C197201D93CB009A78B8 /* bridge.h */,
+				0502C198201D93CB009A78B8 /* silence.mp3 */,
+				0502C199201D93CB009A78B8 /* corporatelogo.png */,
+				0502C19A201D93CB009A78B8 /* Assets.xcassets */,
+				0502C19B201D93CB009A78B8 /* Messagenote.swift */,
+				0502C19C201D93CB009A78B8 /* CreateViewController.swift */,
+				0502C19D201D93CB009A78B8 /* ScanViewController.swift */,
+				0502C19E201D93CB009A78B8 /* LaunchScreen.storyboard */,
+				0502C1A0201D93CB009A78B8 /* Main.storyboard */,
+				0502C1A2201D93CB009A78B8 /* ZZYQRCodeSwift-Bridging-Header.h */,
+				0502C1A3201D93CB009A78B8 /* AppDelegate.swift */,
+				0502C1A4201D93CB009A78B8 /* Customerios.xcdatamodeld */,
+				0502C1A6201D93CB009A78B8 /* Notificationfunction.swift */,
+				0502C1A7201D93CB009A78B8 /* ZZYQRCodeSwift */,
+				0502C1AB201D93CB009A78B8 /* Info.plist */,
+			);
+			path = Customerios;
+			sourceTree = "<group>";
+		};
+		0502C1A7201D93CB009A78B8 /* ZZYQRCodeSwift */ = {
+			isa = PBXGroup;
+			children = (
+				0502C1A8201D93CB009A78B8 /* AVCaptureSessionManager.swift */,
+				0502C1A9201D93CB009A78B8 /* UIImage+ZZYQRCodeImage.swift */,
+				0502C1AA201D93CB009A78B8 /* ZZYQRCode.bundle */,
+			);
+			path = ZZYQRCodeSwift;
+			sourceTree = "<group>";
+		};
 		05AED2CE200F357100D434BD = {
 			isa = PBXGroup;
 			children = (
 				05AED2D9200F357100D434BD /* Customerios */,
+				0502C18F201D93CB009A78B8 /* Customerios */,
 				05AED2D8200F357100D434BD /* Products */,
 				05AED2EF200F357100D434BD /* Frameworks */,
 			);
@@ -220,6 +313,12 @@
 			mainGroup = 05AED2CE200F357100D434BD;
 			productRefGroup = 05AED2D8200F357100D434BD /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 0502C191201D93CB009A78B8 /* Products */;
+					ProjectRef = 0502C190201D93CB009A78B8 /* Customerios.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				05AED2D6200F357100D434BD /* Customerios */,
@@ -234,9 +333,17 @@
 			files = (
 				059BF543200F1EAE0058F057 /* silence.mp3 in Resources */,
 				05AED308200F357100D434BD /* AlipaySDK.bundle in Resources */,
+				0502C1B2201D93CB009A78B8 /* Assets.xcassets in Resources */,
+				0502C1B1201D93CB009A78B8 /* corporatelogo.png in Resources */,
+				0502C1AF201D93CB009A78B8 /* AlipaySDK.bundle in Resources */,
+				0502C1BD201D93CB009A78B8 /* ZZYQRCode.bundle in Resources */,
 				05AED2E8200F357100D434BD /* LaunchScreen.storyboard in Resources */,
 				05AED2E5200F357100D434BD /* Assets.xcassets in Resources */,
+				0502C1BE201D93CB009A78B8 /* Info.plist in Resources */,
+				0502C1B7201D93CB009A78B8 /* Main.storyboard in Resources */,
 				05AED2E0200F357100D434BD /* Main.storyboard in Resources */,
+				0502C1B0201D93CB009A78B8 /* silence.mp3 in Resources */,
+				0502C1B6201D93CB009A78B8 /* LaunchScreen.storyboard in Resources */,
 				05AED2FA200F357100D434BD /* ZZYQRCode.bundle in Resources */,
 				059BF545200F1FEC0058F057 /* corporatelogo.png in Resources */,
 			);
@@ -249,15 +356,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0502C1BA201D93CB009A78B8 /* Notificationfunction.swift in Sources */,
+				0502C1AD201D93CB009A78B8 /* Countdownnote.swift in Sources */,
 				05AED302200F357100D434BD /* Notificationfunction.swift in Sources */,
+				0502C1B5201D93CB009A78B8 /* ScanViewController.swift in Sources */,
+				0502C1B9201D93CB009A78B8 /* Customerios.xcdatamodeld in Sources */,
+				0502C1B4201D93CB009A78B8 /* CreateViewController.swift in Sources */,
+				0502C1BB201D93CB009A78B8 /* AVCaptureSessionManager.swift in Sources */,
 				05AED2DD200F357100D434BD /* ViewController.swift in Sources */,
 				05AED303200F357100D434BD /* CreateViewController.swift in Sources */,
 				05AED2DB200F357100D434BD /* AppDelegate.swift in Sources */,
 				05AED2F8200F357100D434BD /* AVCaptureSessionManager.swift in Sources */,
+				0502C1B8201D93CB009A78B8 /* AppDelegate.swift in Sources */,
+				0502C1AE201D93CB009A78B8 /* ViewController.swift in Sources */,
+				0502C1BC201D93CB009A78B8 /* UIImage+ZZYQRCodeImage.swift in Sources */,
 				05AED306200F357100D434BD /* Messagenote.swift in Sources */,
 				05AED2F9200F357100D434BD /* UIImage+ZZYQRCodeImage.swift in Sources */,
 				05AED305200F357100D434BD /* Countdownnote.swift in Sources */,
 				05AED2E3200F357100D434BD /* Customerios.xcdatamodeld in Sources */,
+				0502C1B3201D93CB009A78B8 /* Messagenote.swift in Sources */,
 				05AED304200F357100D434BD /* ScanViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -265,6 +382,22 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		0502C19E201D93CB009A78B8 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0502C19F201D93CB009A78B8 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		0502C1A0201D93CB009A78B8 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0502C1A1201D93CB009A78B8 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
 		05AED2DE200F357100D434BD /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -457,6 +590,16 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
+		0502C1A4201D93CB009A78B8 /* Customerios.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				0502C1A5201D93CB009A78B8 /* Customerios.xcdatamodel */,
+			);
+			currentVersion = 0502C1A5201D93CB009A78B8 /* Customerios.xcdatamodel */;
+			path = Customerios.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
 		05AED2E1200F357100D434BD /* Customerios.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
