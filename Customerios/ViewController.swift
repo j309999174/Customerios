@@ -13,7 +13,7 @@ import UserNotifications
 import AVFoundation
 import MediaPlayer
 
-class ViewController: UIViewController, WKUIDelegate, WKScriptMessageHandler{
+class ViewController: UIViewController, WKUIDelegate, WKScriptMessageHandler,WKNavigationDelegate{
     var webView: WKWebView!
     var myURL: URL!
     //打开音乐，播放音乐，为了保持后台
@@ -35,8 +35,10 @@ class ViewController: UIViewController, WKUIDelegate, WKScriptMessageHandler{
         //webview加入配置
         webView = WKWebView(frame: .zero, configuration: webConfiguration)
         webView.uiDelegate = self
+        webView.navigationDelegate = self
         view = webView
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -52,6 +54,18 @@ class ViewController: UIViewController, WKUIDelegate, WKScriptMessageHandler{
         
         
     }
+    
+    //错误处理
+    func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error) {
+        print("发生错误：\(error)")
+    }
+    func webView(_ webView: WKWebView, didFailProvisionalNavigation navigation: WKNavigation!, withError error: Error) {
+        //加载本地html
+        let fileURL =  Bundle.main.url(forResource: "htmlerror/error", withExtension: "html" )
+        webView.loadFileURL(fileURL!,allowingReadAccessTo:Bundle.main.bundleURL);
+        print("发生错误：\(error)")
+    }
+
     //设一个方法，执行多线程
     func musicplay(){
         queue.async {

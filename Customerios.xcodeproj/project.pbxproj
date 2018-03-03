@@ -8,13 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		0502C1AD201D93CB009A78B8 /* Countdownnote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0502C194201D93CB009A78B8 /* Countdownnote.swift */; };
-		0502C1AF201D93CB009A78B8 /* AlipaySDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0502C196201D93CB009A78B8 /* AlipaySDK.bundle */; };
-		0502C1B0201D93CB009A78B8 /* silence.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0502C198201D93CB009A78B8 /* silence.mp3 */; };
 		0502C1B1201D93CB009A78B8 /* corporatelogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 0502C199201D93CB009A78B8 /* corporatelogo.png */; };
 		0502C1B2201D93CB009A78B8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0502C19A201D93CB009A78B8 /* Assets.xcassets */; };
 		0502C1B4201D93CB009A78B8 /* CreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0502C19C201D93CB009A78B8 /* CreateViewController.swift */; };
 		0502C1B5201D93CB009A78B8 /* ScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0502C19D201D93CB009A78B8 /* ScanViewController.swift */; };
-		0502C1B6201D93CB009A78B8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0502C19E201D93CB009A78B8 /* LaunchScreen.storyboard */; };
 		0502C1B7201D93CB009A78B8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0502C1A0201D93CB009A78B8 /* Main.storyboard */; };
 		0502C1B9201D93CB009A78B8 /* Customerios.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0502C1A4201D93CB009A78B8 /* Customerios.xcdatamodeld */; };
 		0502C1BB201D93CB009A78B8 /* AVCaptureSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0502C1A8201D93CB009A78B8 /* AVCaptureSessionManager.swift */; };
@@ -22,14 +19,11 @@
 		0502C1BD201D93CB009A78B8 /* ZZYQRCode.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0502C1AA201D93CB009A78B8 /* ZZYQRCode.bundle */; };
 		0502C1BE201D93CB009A78B8 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0502C1AB201D93CB009A78B8 /* Info.plist */; };
 		0502C1BF201D93CB009A78B8 /* AlipaySDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0502C1AC201D93CB009A78B8 /* AlipaySDK.framework */; };
+		0568586A204B15AA009FD16E /* htmlerror in Resources */ = {isa = PBXBuildFile; fileRef = 05685869204B15AA009FD16E /* htmlerror */; };
 		059BF543200F1EAE0058F057 /* silence.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 059BF542200F1EAE0058F057 /* silence.mp3 */; };
-		059BF545200F1FEC0058F057 /* corporatelogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 059BF544200F1FEC0058F057 /* corporatelogo.png */; };
 		05AED2DB200F357100D434BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05AED2DA200F357100D434BD /* AppDelegate.swift */; };
 		05AED2DD200F357100D434BD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05AED2DC200F357100D434BD /* ViewController.swift */; };
-		05AED2E0200F357100D434BD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05AED2DE200F357100D434BD /* Main.storyboard */; };
-		05AED2E5200F357100D434BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05AED2E4200F357100D434BD /* Assets.xcassets */; };
 		05AED2E8200F357100D434BD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05AED2E6200F357100D434BD /* LaunchScreen.storyboard */; };
-		05AED2FA200F357100D434BD /* ZZYQRCode.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 05AED2F7200F357100D434BD /* ZZYQRCode.bundle */; };
 		05AED302200F357100D434BD /* Notificationfunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05AED2FD200F357100D434BD /* Notificationfunction.swift */; };
 		05AED306200F357100D434BD /* Messagenote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05AED301200F357100D434BD /* Messagenote.swift */; };
 		05AED308200F357100D434BD /* AlipaySDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 05AED307200F357100D434BD /* AlipaySDK.bundle */; };
@@ -70,6 +64,7 @@
 		0502C1AA201D93CB009A78B8 /* ZZYQRCode.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ZZYQRCode.bundle; sourceTree = "<group>"; };
 		0502C1AB201D93CB009A78B8 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0502C1AC201D93CB009A78B8 /* AlipaySDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AlipaySDK.framework; sourceTree = "<group>"; };
+		05685869204B15AA009FD16E /* htmlerror */ = {isa = PBXFileReference; lastKnownFileType = folder; path = htmlerror; sourceTree = "<group>"; };
 		059BF542200F1EAE0058F057 /* silence.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = silence.mp3; sourceTree = "<group>"; };
 		059BF544200F1FEC0058F057 /* corporatelogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = corporatelogo.png; sourceTree = "<group>"; };
 		05AED2D7200F357100D434BD /* Customerios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Customerios.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -201,6 +196,7 @@
 		05AED2D9200F357100D434BD /* Customerios */ = {
 			isa = PBXGroup;
 			children = (
+				05685869204B15AA009FD16E /* htmlerror */,
 				05BE5462201DA7C700D5D56B /* Customerios.entitlements */,
 				059BF544200F1FEC0058F057 /* corporatelogo.png */,
 				059BF542200F1EAE0058F057 /* silence.mp3 */,
@@ -327,20 +323,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				059BF543200F1EAE0058F057 /* silence.mp3 in Resources */,
+				0568586A204B15AA009FD16E /* htmlerror in Resources */,
 				05AED308200F357100D434BD /* AlipaySDK.bundle in Resources */,
 				0502C1B2201D93CB009A78B8 /* Assets.xcassets in Resources */,
 				0502C1B1201D93CB009A78B8 /* corporatelogo.png in Resources */,
-				0502C1AF201D93CB009A78B8 /* AlipaySDK.bundle in Resources */,
 				0502C1BD201D93CB009A78B8 /* ZZYQRCode.bundle in Resources */,
 				05AED2E8200F357100D434BD /* LaunchScreen.storyboard in Resources */,
-				05AED2E5200F357100D434BD /* Assets.xcassets in Resources */,
 				0502C1BE201D93CB009A78B8 /* Info.plist in Resources */,
 				0502C1B7201D93CB009A78B8 /* Main.storyboard in Resources */,
-				05AED2E0200F357100D434BD /* Main.storyboard in Resources */,
-				0502C1B0201D93CB009A78B8 /* silence.mp3 in Resources */,
-				0502C1B6201D93CB009A78B8 /* LaunchScreen.storyboard in Resources */,
-				05AED2FA200F357100D434BD /* ZZYQRCode.bundle in Resources */,
-				059BF545200F1FEC0058F057 /* corporatelogo.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -525,7 +515,7 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				INFOPLIST_FILE = Customerios/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = jd.Customerios;
+				PRODUCT_BUNDLE_IDENTIFIER = oushelun.Customerios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				"SWIFT_OBJC_BRIDGING_HEADER[arch=*]" = /Users/jiangdong/Desktop/iosapp/Customerios/Customerios/bridge.h;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -550,7 +540,7 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				INFOPLIST_FILE = Customerios/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = jd.Customerios;
+				PRODUCT_BUNDLE_IDENTIFIER = oushelun.Customerios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				"SWIFT_OBJC_BRIDGING_HEADER[arch=*]" = /Users/jiangdong/Desktop/iosapp/Customerios/Customerios/bridge.h;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
