@@ -32,6 +32,7 @@ class ViewController: UIViewController, WKUIDelegate, WKScriptMessageHandler,WKN
         webConfiguration.userContentController.add(self,name: "iosAlipay")
         webConfiguration.userContentController.add(self,name: "ioscusidsave")
         webConfiguration.userContentController.add(self,name: "ioscountdown")
+        webConfiguration.userContentController.add(self,name: "iosWechat")
         //webview加入配置
         webView = WKWebView(frame: .zero, configuration: webConfiguration)
         webView.uiDelegate = self
@@ -134,6 +135,20 @@ class ViewController: UIViewController, WKUIDelegate, WKScriptMessageHandler,WKN
             AlipaySDK.defaultService().payOrder(message.body as! String, fromScheme: "jiangdongiosalipay") { (result) in
                 print("支付宝支付结果\(String(describing: result))")
             }
+        }
+        //js调用的微信
+        if(message.name == "iosWechat"){
+            print("微信支付\(message.body)")
+            let req = PayReq()
+            var allpara = message.body as! Array<Any>
+            req.openID = allpara[0] as! String
+            req.partnerId = allpara[1] as! String
+            req.prepayId = allpara[2] as! String
+            req.nonceStr = allpara[3] as! String
+            req.timeStamp = UInt32(allpara[4] as! String)!
+            req.package = "Sign=WXPay"
+            req.sign = allpara[5] as! String
+            WXApi.send(req)
         }
         //js调用储存用户ID
         if(message.name == "ioscusidsave"){

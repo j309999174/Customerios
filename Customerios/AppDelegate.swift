@@ -39,6 +39,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         //徽章为0
         UserDefaults.standard.set(0, forKey: "badgebadgenumber")
         application.applicationIconBadgeNumber = 0
+        //微信注册id
+        WXApi.registerApp("wxc7ff179d403b7a51", enableMTA: false)
         //请求通知权限
         UNUserNotificationCenter.current()
             .requestAuthorization(options: [.alert, .sound, .badge]) {

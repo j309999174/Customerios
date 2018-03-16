@@ -27,6 +27,9 @@
 		05AED302200F357100D434BD /* Notificationfunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05AED2FD200F357100D434BD /* Notificationfunction.swift */; };
 		05AED306200F357100D434BD /* Messagenote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05AED301200F357100D434BD /* Messagenote.swift */; };
 		05AED308200F357100D434BD /* AlipaySDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 05AED307200F357100D434BD /* AlipaySDK.bundle */; };
+		05E6C9EB205C4C0B0031C3B9 /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 05E6C9E9205C4C0B0031C3B9 /* libWeChatSDK.a */; };
+		05E6C9EC205C4C0C0031C3B9 /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = 05E6C9EA205C4C0B0031C3B9 /* README.txt */; };
+		05E6C9EE205C4DD20031C3B9 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 05E6C9ED205C4DD10031C3B9 /* libsqlite3.0.tbd */; };
 		05F8808F200FB6570008C0EE /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05F8808E200FB6570008C0EE /* SystemConfiguration.framework */; };
 		05F88091200FB66D0008C0EE /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05F88090200FB66D0008C0EE /* CoreTelephony.framework */; };
 		05F88092200FB6800008C0EE /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05AED2F2200F357100D434BD /* CoreText.framework */; };
@@ -89,6 +92,12 @@
 		05AED301200F357100D434BD /* Messagenote.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Messagenote.swift; sourceTree = "<group>"; };
 		05AED307200F357100D434BD /* AlipaySDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AlipaySDK.bundle; sourceTree = "<group>"; };
 		05BE5462201DA7C700D5D56B /* Customerios.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Customerios.entitlements; sourceTree = "<group>"; };
+		05E6C9E6205C4C0A0031C3B9 /* WXApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApi.h; sourceTree = "<group>"; };
+		05E6C9E7205C4C0A0031C3B9 /* WechatAuthSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WechatAuthSDK.h; sourceTree = "<group>"; };
+		05E6C9E8205C4C0B0031C3B9 /* WXApiObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApiObject.h; sourceTree = "<group>"; };
+		05E6C9E9205C4C0B0031C3B9 /* libWeChatSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWeChatSDK.a; sourceTree = "<group>"; };
+		05E6C9EA205C4C0B0031C3B9 /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
+		05E6C9ED205C4DD10031C3B9 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		05F8808E200FB6570008C0EE /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		05F88090200FB66D0008C0EE /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		05F88093200FB6960008C0EE /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
@@ -106,6 +115,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05E6C9EE205C4DD20031C3B9 /* libsqlite3.0.tbd in Frameworks */,
+				05E6C9EB205C4C0B0031C3B9 /* libWeChatSDK.a in Frameworks */,
 				05F880A3200FB7B60008C0EE /* libz.tbd in Frameworks */,
 				05F880A1200FB7A30008C0EE /* libc++.tbd in Frameworks */,
 				05F8809F200FB73E0008C0EE /* AlipaySDK.framework in Frameworks */,
@@ -196,6 +207,7 @@
 		05AED2D9200F357100D434BD /* Customerios */ = {
 			isa = PBXGroup;
 			children = (
+				05E6C9E5205C4BF00031C3B9 /* wechatsdk */,
 				05685869204B15AA009FD16E /* htmlerror */,
 				05BE5462201DA7C700D5D56B /* Customerios.entitlements */,
 				059BF544200F1FEC0058F057 /* corporatelogo.png */,
@@ -223,6 +235,7 @@
 		05AED2EF200F357100D434BD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				05E6C9ED205C4DD10031C3B9 /* libsqlite3.0.tbd */,
 				05F880A2200FB7B60008C0EE /* libz.tbd */,
 				05F880A0200FB7A30008C0EE /* libc++.tbd */,
 				05F8809E200FB73E0008C0EE /* AlipaySDK.framework */,
@@ -247,6 +260,18 @@
 				05AED2F7200F357100D434BD /* ZZYQRCode.bundle */,
 			);
 			path = ZZYQRCodeSwift;
+			sourceTree = "<group>";
+		};
+		05E6C9E5205C4BF00031C3B9 /* wechatsdk */ = {
+			isa = PBXGroup;
+			children = (
+				05E6C9E9205C4C0B0031C3B9 /* libWeChatSDK.a */,
+				05E6C9EA205C4C0B0031C3B9 /* README.txt */,
+				05E6C9E7205C4C0A0031C3B9 /* WechatAuthSDK.h */,
+				05E6C9E6205C4C0A0031C3B9 /* WXApi.h */,
+				05E6C9E8205C4C0B0031C3B9 /* WXApiObject.h */,
+			);
+			path = wechatsdk;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -326,6 +351,7 @@
 				0568586A204B15AA009FD16E /* htmlerror in Resources */,
 				05AED308200F357100D434BD /* AlipaySDK.bundle in Resources */,
 				0502C1B2201D93CB009A78B8 /* Assets.xcassets in Resources */,
+				05E6C9EC205C4C0C0031C3B9 /* README.txt in Resources */,
 				0502C1B1201D93CB009A78B8 /* corporatelogo.png in Resources */,
 				0502C1BD201D93CB009A78B8 /* ZZYQRCode.bundle in Resources */,
 				05AED2E8200F357100D434BD /* LaunchScreen.storyboard in Resources */,
@@ -515,6 +541,10 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				INFOPLIST_FILE = Customerios/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Customerios/wechatsdk",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = oushelun.Customerios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				"SWIFT_OBJC_BRIDGING_HEADER[arch=*]" = /Users/jiangdong/Desktop/iosapp/Customerios/Customerios/bridge.h;
@@ -540,6 +570,10 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				INFOPLIST_FILE = Customerios/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Customerios/wechatsdk",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = oushelun.Customerios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				"SWIFT_OBJC_BRIDGING_HEADER[arch=*]" = /Users/jiangdong/Desktop/iosapp/Customerios/Customerios/bridge.h;

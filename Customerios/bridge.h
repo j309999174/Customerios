@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 #import <AlipaySDK/AlipaySDK.h>
 #import <UIKit/UIKit.h>
+#import "WXApi.h"
+#import "WXApiObject.h"
 @interface bridge : NSObject
 
 @end
