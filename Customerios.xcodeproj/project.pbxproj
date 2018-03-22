@@ -32,6 +32,7 @@
 		05E6C9EE205C4DD20031C3B9 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 05E6C9ED205C4DD10031C3B9 /* libsqlite3.0.tbd */; };
 		05E6C9F5205C56710031C3B9 /* alipay.png in Resources */ = {isa = PBXBuildFile; fileRef = 05E6C9F4205C56710031C3B9 /* alipay.png */; };
 		05E6C9F7205C56790031C3B9 /* wechat.png in Resources */ = {isa = PBXBuildFile; fileRef = 05E6C9F6205C56790031C3B9 /* wechat.png */; };
+		05E6C9FB2063E5BC0031C3B9 /* welcomeimg.png in Resources */ = {isa = PBXBuildFile; fileRef = 05E6C9FA2063E5BC0031C3B9 /* welcomeimg.png */; };
 		05F8808F200FB6570008C0EE /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05F8808E200FB6570008C0EE /* SystemConfiguration.framework */; };
 		05F88091200FB66D0008C0EE /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05F88090200FB66D0008C0EE /* CoreTelephony.framework */; };
 		05F88092200FB6800008C0EE /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05AED2F2200F357100D434BD /* CoreText.framework */; };
@@ -102,6 +103,7 @@
 		05E6C9ED205C4DD10031C3B9 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		05E6C9F4205C56710031C3B9 /* alipay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = alipay.png; sourceTree = "<group>"; };
 		05E6C9F6205C56790031C3B9 /* wechat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wechat.png; sourceTree = "<group>"; };
+		05E6C9FA2063E5BC0031C3B9 /* welcomeimg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = welcomeimg.png; sourceTree = "<group>"; };
 		05F8808E200FB6570008C0EE /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		05F88090200FB66D0008C0EE /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		05F88093200FB6960008C0EE /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
@@ -213,6 +215,7 @@
 		05AED2D9200F357100D434BD /* Customerios */ = {
 			isa = PBXGroup;
 			children = (
+				05E6C9FA2063E5BC0031C3B9 /* welcomeimg.png */,
 				05E6C9E5205C4BF00031C3B9 /* wechatsdk */,
 				05685869204B15AA009FD16E /* htmlerror */,
 				05BE5462201DA7C700D5D56B /* Customerios.entitlements */,
@@ -363,6 +366,7 @@
 				0502C1BD201D93CB009A78B8 /* ZZYQRCode.bundle in Resources */,
 				05AED2E8200F357100D434BD /* LaunchScreen.storyboard in Resources */,
 				0502C1BE201D93CB009A78B8 /* Info.plist in Resources */,
+				05E6C9FB2063E5BC0031C3B9 /* welcomeimg.png in Resources */,
 				05E6C9F5205C56710031C3B9 /* alipay.png in Resources */,
 				0502C1B7201D93CB009A78B8 /* Main.storyboard in Resources */,
 			);

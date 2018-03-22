@@ -121,7 +121,10 @@ class ViewController: UIViewController, WKUIDelegate, WKScriptMessageHandler,WKN
             }){
                 let action = UIAlertAction(title: "确定", style: UIAlertActionStyle.default, handler: { (action) in
                     let url = URL(string: UIApplicationOpenSettingsURLString)
-                    UIApplication.shared.openURL(url!)
+                    // Swift
+                    let options = [UIApplicationOpenURLOptionUniversalLinksOnly : true]
+                    UIApplication.shared.open(url!, options: options, completionHandler: nil)
+                    //UIApplication.shared.openURL(url!)
                 })
                 let con = UIAlertController(title: "权限未开启", message: "您未开启相机权限，点击确定跳转至系统设置开启", preferredStyle: UIAlertControllerStyle.alert)
                 con.addAction(action)
