@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="QY5-Ne-ouB">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="QY5-Ne-ouB">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ZZYQRCodeSwift" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Customerios" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -53,7 +53,7 @@
         <!--Create View Controller-->
         <scene sceneID="Ddn-me-GrR">
             <objects>
-                <viewController storyboardIdentifier="createViewController" id="YrV-ZQ-MKa" customClass="CreateViewController" customModule="ZZYQRCodeSwift" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="createViewController" id="YrV-ZQ-MKa" customClass="CreateViewController" customModule="Customerios" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="zIj-Xl-L6d"/>
                         <viewControllerLayoutGuide type="bottom" id="yoU-bL-qTA"/>
@@ -116,7 +116,7 @@
         <!--scan(扫描)-->
         <scene sceneID="Hg8-5n-Cei">
             <objects>
-                <viewController storyboardIdentifier="scanViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="1E7-sy-vbj" customClass="ScanViewController" customModule="ZZYQRCodeSwift" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="scanViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="1E7-sy-vbj" customClass="ScanViewController" customModule="Customerios" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Wvm-IJ-q3g"/>
                         <viewControllerLayoutGuide type="bottom" id="C7d-hS-sTB"/>
@@ -178,8 +178,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="qrcode_border" width="51" height="50"/>
+        <image name="qrcode_border" width="51" height="51"/>
         <image name="qrcode_scanline_qrcode" width="218" height="170"/>
     </resources>
 </document>
-
