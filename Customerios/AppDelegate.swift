@@ -18,11 +18,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     var window: UIWindow?
     //多线程
     let queue = DispatchQueue(label: "创建并行队列", attributes: .concurrent)
-    var player:AVPlayer?
-    //    //定位
-    //    let locationManager = CLLocationManager()
-    //    var currentLocation:CLLocation!
-    //    var lock = NSLock()
+    //var player:AVPlayer?
+    
     
     
     func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
@@ -50,30 +47,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
                 }
         }
         // 注册后台播放
-        let session = AVAudioSession.sharedInstance()
-        do {
-            try session.setActive(true)
-            try session.setCategory(AVAudioSessionCategoryPlayback)
-        } catch {
-            print(error)
-        }
+//        let session = AVAudioSession.sharedInstance()
+//        do {
+//            try session.setActive(true)
+//            try session.setCategory(AVAudioSessionCategoryPlayback)
+//        } catch {
+//            print(error)
+//        }
         
         queue.async {
-            
-            //播放器相关
-            //var playerItem:AVPlayerItem?
-            //var player:AVPlayer?
-            // Do any additional setup after loading the view, typically from a nib.
-            let path = Bundle.main.path(forResource: "silence", ofType: "mp3")
-            guard path != nil else { return }
-            let asset = AVAsset(url: URL(fileURLWithPath: path!))
-            let item = AVPlayerItem(asset: asset)
-            self.player = AVPlayer(playerItem: item)
-            //初始化播放器
-            //let url = URL(string: "http://mxd.766.com/sdo/music/data/3/m10.mp3")
-            //playerItem = AVPlayerItem(url: url!)
-            //player = AVPlayer(playerItem: playerItem!)
-            self.player!.play()
+            //播放
+//            let path = Bundle.main.path(forResource: "silence", ofType: "mp3")
+//            guard path != nil else { return }
+//            let asset = AVAsset(url: URL(fileURLWithPath: path!))
+//            let item = AVPlayerItem(asset: asset)
+//            self.player = AVPlayer(playerItem: item)
+//            self.player!.play()
             print("1 秒后输出")
             while(true){
                 sleep(8)
@@ -84,18 +73,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
                 //                self.locationManager.requestWhenInUseAuthorization()
                 //                self.locationManager.startUpdatingLocation()
                 //                print("开始定位》》》")
-                self.player!.seek(to: CMTimeMake(1, 1))
-                print("http://47.96.173.116/customerajax/unreadjsoncustomer/\(String(describing: UserDefaults.standard.string(forKey: "cusid")))")
+                
+                //播放
+                //self.player!.seek(to: CMTimeMake(1, 1))
+                print("https://www.oushelun.cn/customerajax/unreadjsoncustomer/\(String(describing: UserDefaults.standard.string(forKey: "cusid")))")
                 //获取数据  顾客的消息推送,
                 
                 if ((UserDefaults.standard.string(forKey: "cusid")) != nil){
-                    let urlmessage:String!="http://47.96.173.116/customerajax/unreadjsoncustomer/\(String(describing: UserDefaults.standard.string(forKey: "cusid")!))"
+                    let urlmessage:String!="https://www.oushelun.cn/customerajax/unreadjsoncustomer/\(String(describing: UserDefaults.standard.string(forKey: "cusid")!))"
                     print(urlmessage)
                     let messagenote=Messagenote()
                     messagenote.httpGet(request: URLRequest(url: URL(string: urlmessage)!))
                     //获取数据  通知的推送
                     let notificationfunction=Notificationfunction()
-                    notificationfunction.httpGet(request: URLRequest(url: URL(string: "http://47.96.173.116/customerajax/notificationjson/123")!))
+                    notificationfunction.httpGet(request: URLRequest(url: URL(string: "https://www.oushelun.cn/customerajax/notificationjson/123")!))
                     
                 }
             }
@@ -108,22 +99,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.
-        self.player!.play()
+        //self.player!.play()
     }
     
     func applicationDidEnterBackground(_ application: UIApplication) {
         // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
         // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
         
-        self.player!.play()
+        //self.player!.play()
         //获取数据  通知的推送
         let notificationfunction=Notificationfunction()
-        notificationfunction.httpGet(request: URLRequest(url: URL(string: "http://47.96.173.116/customerajax/notificationjson/123")!))
+        notificationfunction.httpGet(request: URLRequest(url: URL(string: "https://www.oushelun.cn/customerajax/notificationjson/123")!))
     }
     
     func applicationWillEnterForeground(_ application: UIApplication) {
         // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
-        self.player!.play()
+        //self.player!.play()
         //徽章为0
         UserDefaults.standard.set(0, forKey: "badgebadgenumber")
         application.applicationIconBadgeNumber = 0
@@ -132,12 +123,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     
     func applicationDidBecomeActive(_ application: UIApplication) {
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
-        self.player!.play()
+        //self.player!.play()
     }
     
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
-        self.player!.play()
+        //self.player!.play()
     }
     //定位
     //    //委托传回定位，获取最后一个

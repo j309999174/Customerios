@@ -20,7 +20,7 @@ class ViewController: UIViewController, WKUIDelegate, WKScriptMessageHandler,WKN
     let queue = DispatchQueue(label: "创建并行队列", attributes: .concurrent)
     
     //默认首页
-    var passresut: String!="http://47.96.173.116/customer/homepage/123"
+    var passresut: String!="https://www.oushelun.cn/customer/homepage/123"
     override func loadView() {
         //创建配置
         let webConfiguration = WKWebViewConfiguration()
@@ -72,31 +72,22 @@ class ViewController: UIViewController, WKUIDelegate, WKScriptMessageHandler,WKN
         queue.async {
             print("1 秒后输出")
             //播放器相关
-            //var playerItem:AVPlayerItem?
-            var player:AVPlayer?
-            // Do any additional setup after loading the view, typically from a nib.
-            //初始化播放器
-            //_ = Bundle.main
-            let path = Bundle.main.path(forResource: "silence", ofType: "mp3")
-            guard path != nil else { return }
-            let asset = AVAsset(url: URL(fileURLWithPath: path!))
-            let item = AVPlayerItem(asset: asset)
-            player = AVPlayer(playerItem: item)
-            //playerLayer = AVPlayerLayer(player: player)
-            //playerContainer.layer.addSublayer(playerLayer)
-            
-            //let url = URL(string: "http://mxd.766.com/sdo/music/data/3/m10.mp3")
-            //playerItem = AVPlayerItem(url: url!)
-            //player = AVPlayer(playerItem: playerItem!)
-            player!.play()
+//            var player:AVPlayer?
+//
+//            let path = Bundle.main.path(forResource: "silence", ofType: "mp3")
+//            guard path != nil else { return }
+//            let asset = AVAsset(url: URL(fileURLWithPath: path!))
+//            let item = AVPlayerItem(asset: asset)
+//            player = AVPlayer(playerItem: item)
+//            player!.play()
             
             while(true){
                 sleep(10)
-                player!.seek(to: CMTimeMake(1, 1))
-                print("http://47.96.173.116/customerajax/unreadjsoncustomer/\(String(describing: UserDefaults.standard.string(forKey: "cusid")))")
+                //player!.seek(to: CMTimeMake(1, 1))
+                print("https://www.oushelun.cn/customerajax/unreadjsoncustomer/\(String(describing: UserDefaults.standard.string(forKey: "cusid")))")
                 //获取数据  顾客的消息推送,
                 if ((UserDefaults.standard.string(forKey: "cusid")) != nil){
-                    let urlmessage:String!="http://47.96.173.116/customerajax/unreadjsoncustomer/\(String(describing: UserDefaults.standard.string(forKey: "cusid")!))"
+                    let urlmessage:String!="https://www.oushelun.cn/customerajax/unreadjsoncustomer/\(String(describing: UserDefaults.standard.string(forKey: "cusid")!))"
                     print(urlmessage)
                     let messagenote=Messagenote()
                     messagenote.httpGet(request: URLRequest(url: URL(string: urlmessage)!))
