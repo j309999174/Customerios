@@ -20,6 +20,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     let queue = DispatchQueue(label: "创建并行队列", attributes: .concurrent)
     //var player:AVPlayer?
     
+    //定位
+    let locationManager = CLLocationManager()
+    var currentLocation:CLLocation!
+    var lock = NSLock()
+    
     
     
     func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
@@ -55,6 +60,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
 //            print(error)
 //        }
         
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest //定位精确度（最高）一般有电源接入，比较耗电
+        //kCLLocationAccuracyNearestTenMeters;                    //精确到10米
+        locationManager.distanceFilter = 50                       //设备移动后获得定位的最小距离（适合用来采集运动的定位）
+        locationManager.requestWhenInUseAuthorization()           //弹出用户授权对话框，使用程序期间授权（ios8后)
+        //requestAlwaysAuthorization;                             //始终授权
+        locationManager.startUpdatingLocation()
+        print("开始定位》》》")
+        
         queue.async {
             //播放
 //            let path = Bundle.main.path(forResource: "silence", ofType: "mp3")
@@ -66,13 +80,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
             print("1 秒后输出")
             while(true){
                 sleep(8)
-                //定位
-                //                self.locationManager.delegate = self
-                //                self.locationManager.desiredAccuracy = kCLLocationAccuracyBest
-                //                self.locationManager.distanceFilter = 50
-                //                self.locationManager.requestWhenInUseAuthorization()
-                //                self.locationManager.startUpdatingLocation()
-                //                print("开始定位》》》")
+                
                 
                 //播放
                 //self.player!.seek(to: CMTimeMake(1, 1))
@@ -131,19 +139,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         //self.player!.play()
     }
     //定位
-    //    //委托传回定位，获取最后一个
-    //    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-    //        lock.lock()
-    //        currentLocation = locations.last                        //注意：获取集合中最后一个位置（最新的位置）
-    //        print("定位经纬度为：\(currentLocation.coordinate.latitude)")
-    //        //一直发生定位错误输出结果为0：原因是我输出的是currentLocation.altitude(表示高度的)而不是currentLoction.coordinate.latitude（这个才是纬度）
-    //        print(currentLocation.coordinate.longitude)
-    //        lock.unlock()
-    //
-    //    }
-    //    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
-    //        print("定位出错拉！！\(error)")
-    //    }
+        //委托传回定位，获取最后一个
+        func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+            lock.lock()
+            currentLocation = locations.last                        //注意：获取集合中最后一个位置（最新的位置）
+            print("定位经纬度为：\(currentLocation.coordinate.latitude)")
+            //一直发生定位错误输出结果为0：原因是我输出的是currentLocation.altitude(表示高度的)而不是currentLoction.coordinate.latitude（这个才是纬度）
+            print(currentLocation.coordinate.longitude)
+            lock.unlock()
+
+        }
+        func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+            print("定位出错拉！！\(error)")
+        }
     
 }
 

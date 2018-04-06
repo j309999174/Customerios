@@ -17,8 +17,7 @@
 		0502C1BB201D93CB009A78B8 /* AVCaptureSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0502C1A8201D93CB009A78B8 /* AVCaptureSessionManager.swift */; };
 		0502C1BC201D93CB009A78B8 /* UIImage+ZZYQRCodeImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0502C1A9201D93CB009A78B8 /* UIImage+ZZYQRCodeImage.swift */; };
 		0502C1BD201D93CB009A78B8 /* ZZYQRCode.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0502C1AA201D93CB009A78B8 /* ZZYQRCode.bundle */; };
-		0502C1BE201D93CB009A78B8 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0502C1AB201D93CB009A78B8 /* Info.plist */; };
-		0502C1BF201D93CB009A78B8 /* AlipaySDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0502C1AC201D93CB009A78B8 /* AlipaySDK.framework */; };
+		0546B18D20770B2B00950392 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0546B18C20770B2B00950392 /* CoreLocation.framework */; };
 		0568586A204B15AA009FD16E /* htmlerror in Resources */ = {isa = PBXBuildFile; fileRef = 05685869204B15AA009FD16E /* htmlerror */; };
 		059BF543200F1EAE0058F057 /* silence.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 059BF542200F1EAE0058F057 /* silence.mp3 */; };
 		05AED2DB200F357100D434BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05AED2DA200F357100D434BD /* AppDelegate.swift */; };
@@ -70,6 +69,7 @@
 		0502C1AA201D93CB009A78B8 /* ZZYQRCode.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ZZYQRCode.bundle; sourceTree = "<group>"; };
 		0502C1AB201D93CB009A78B8 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0502C1AC201D93CB009A78B8 /* AlipaySDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AlipaySDK.framework; sourceTree = "<group>"; };
+		0546B18C20770B2B00950392 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		05685869204B15AA009FD16E /* htmlerror */ = {isa = PBXFileReference; lastKnownFileType = folder; path = htmlerror; sourceTree = "<group>"; };
 		059BF542200F1EAE0058F057 /* silence.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = silence.mp3; sourceTree = "<group>"; };
 		059BF544200F1FEC0058F057 /* corporatelogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = corporatelogo.png; sourceTree = "<group>"; };
@@ -121,6 +121,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0546B18D20770B2B00950392 /* CoreLocation.framework in Frameworks */,
 				05E6C9EE205C4DD20031C3B9 /* libsqlite3.0.tbd in Frameworks */,
 				05E6C9EB205C4C0B0031C3B9 /* libWeChatSDK.a in Frameworks */,
 				05F880A3200FB7B60008C0EE /* libz.tbd in Frameworks */,
@@ -133,7 +134,6 @@
 				05F88095200FB6A20008C0EE /* CoreGraphics.framework in Frameworks */,
 				05F88094200FB6960008C0EE /* CoreMotion.framework in Frameworks */,
 				05F88092200FB6800008C0EE /* CoreText.framework in Frameworks */,
-				0502C1BF201D93CB009A78B8 /* AlipaySDK.framework in Frameworks */,
 				05F88091200FB66D0008C0EE /* CoreTelephony.framework in Frameworks */,
 				05F8808F200FB6570008C0EE /* SystemConfiguration.framework in Frameworks */,
 			);
@@ -244,6 +244,7 @@
 		05AED2EF200F357100D434BD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0546B18C20770B2B00950392 /* CoreLocation.framework */,
 				05E6C9ED205C4DD10031C3B9 /* libsqlite3.0.tbd */,
 				05F880A2200FB7B60008C0EE /* libz.tbd */,
 				05F880A0200FB7A30008C0EE /* libc++.tbd */,
@@ -310,7 +311,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0920;
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = "江东";
 				TargetAttributes = {
 					05AED2D6200F357100D434BD = {
@@ -365,7 +366,6 @@
 				0502C1B1201D93CB009A78B8 /* corporatelogo.png in Resources */,
 				0502C1BD201D93CB009A78B8 /* ZZYQRCode.bundle in Resources */,
 				05AED2E8200F357100D434BD /* LaunchScreen.storyboard in Resources */,
-				0502C1BE201D93CB009A78B8 /* Info.plist in Resources */,
 				05E6C9FB2063E5BC0031C3B9 /* welcomeimg.png in Resources */,
 				05E6C9F5205C56710031C3B9 /* alipay.png in Resources */,
 				0502C1B7201D93CB009A78B8 /* Main.storyboard in Resources */,
@@ -444,6 +444,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -451,6 +452,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -501,6 +503,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -508,6 +511,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -541,7 +545,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CLANG_CXX_LIBRARY = "libstdc++";
+				CLANG_CXX_LIBRARY = "compiler-default";
 				CODE_SIGN_ENTITLEMENTS = Customerios/Customerios.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Y683GGLLBM;
@@ -570,7 +574,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CLANG_CXX_LIBRARY = "libstdc++";
+				CLANG_CXX_LIBRARY = "compiler-default";
 				CODE_SIGN_ENTITLEMENTS = Customerios/Customerios.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Y683GGLLBM;
@@ -588,6 +592,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = oushelun.Customerios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_COMPILATION_MODE = wholemodule;
 				"SWIFT_OBJC_BRIDGING_HEADER[arch=*]" = /Users/jiangdong/Desktop/iosapp/Customerios/Customerios/bridge.h;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
