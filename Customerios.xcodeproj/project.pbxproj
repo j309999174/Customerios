@@ -18,6 +18,7 @@
 		0502C1BC201D93CB009A78B8 /* UIImage+ZZYQRCodeImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0502C1A9201D93CB009A78B8 /* UIImage+ZZYQRCodeImage.swift */; };
 		0502C1BD201D93CB009A78B8 /* ZZYQRCode.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0502C1AA201D93CB009A78B8 /* ZZYQRCode.bundle */; };
 		0546B18D20770B2B00950392 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0546B18C20770B2B00950392 /* CoreLocation.framework */; };
+		0546B1912077387600950392 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0546B1902077387600950392 /* MapKit.framework */; };
 		0568586A204B15AA009FD16E /* htmlerror in Resources */ = {isa = PBXBuildFile; fileRef = 05685869204B15AA009FD16E /* htmlerror */; };
 		059BF543200F1EAE0058F057 /* silence.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 059BF542200F1EAE0058F057 /* silence.mp3 */; };
 		05AED2DB200F357100D434BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05AED2DA200F357100D434BD /* AppDelegate.swift */; };
@@ -70,6 +71,7 @@
 		0502C1AB201D93CB009A78B8 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0502C1AC201D93CB009A78B8 /* AlipaySDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AlipaySDK.framework; sourceTree = "<group>"; };
 		0546B18C20770B2B00950392 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		0546B1902077387600950392 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		05685869204B15AA009FD16E /* htmlerror */ = {isa = PBXFileReference; lastKnownFileType = folder; path = htmlerror; sourceTree = "<group>"; };
 		059BF542200F1EAE0058F057 /* silence.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = silence.mp3; sourceTree = "<group>"; };
 		059BF544200F1FEC0058F057 /* corporatelogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = corporatelogo.png; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0546B1912077387600950392 /* MapKit.framework in Frameworks */,
 				0546B18D20770B2B00950392 /* CoreLocation.framework in Frameworks */,
 				05E6C9EE205C4DD20031C3B9 /* libsqlite3.0.tbd in Frameworks */,
 				05E6C9EB205C4C0B0031C3B9 /* libWeChatSDK.a in Frameworks */,
@@ -244,6 +247,7 @@
 		05AED2EF200F357100D434BD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0546B1902077387600950392 /* MapKit.framework */,
 				0546B18C20770B2B00950392 /* CoreLocation.framework */,
 				05E6C9ED205C4DD10031C3B9 /* libsqlite3.0.tbd */,
 				05F880A2200FB7B60008C0EE /* libz.tbd */,

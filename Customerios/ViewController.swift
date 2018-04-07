@@ -13,20 +13,24 @@ import UserNotifications
 import AVFoundation
 import MediaPlayer
 
+
 class ViewController: UIViewController, WKUIDelegate, WKScriptMessageHandler,WKNavigationDelegate{
     var webView: WKWebView!
     var myURL: URL!
     //打开音乐，播放音乐，为了保持后台
     let queue = DispatchQueue(label: "创建并行队列", attributes: .concurrent)
     
+    
     //默认首页
     var passresut: String!="https://www.oushelun.cn/customer/homepage/123"
     override func loadView() {
+        print("loadview")
         //创建配置
+        
         let webConfiguration = WKWebViewConfiguration()
         //创建用户脚本，负责swift调js
-        let userScript = WKUserScript(source: "redHeader()", injectionTime: .atDocumentEnd, forMainFrameOnly: true)
-        webConfiguration.userContentController.addUserScript(userScript)
+        //let userScript = WKUserScript(source: "curaddress('')",injectionTime: .atDocumentEnd, forMainFrameOnly: true)
+        //webConfiguration.userContentController.addUserScript(userScript)
         //内容控制，负责js调用swift
         webConfiguration.userContentController.add(self,name: "callbackHandler")
         webConfiguration.userContentController.add(self,name: "iosAlipay")
@@ -42,6 +46,7 @@ class ViewController: UIViewController, WKUIDelegate, WKScriptMessageHandler,WKN
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("viewdidload")
         
         
         self.navigationController?.setNavigationBarHidden(true,animated: false)
@@ -49,13 +54,27 @@ class ViewController: UIViewController, WKUIDelegate, WKScriptMessageHandler,WKN
         myURL = URL(string: passresut)
         //let myURL = URL(string: "http://172.114.10.238/customer/homepage/123")
         let myRequest = URLRequest(url: myURL!)
+        print(passresut)
         webView.load(myRequest)
         
         //self.musicplay()
-        
+        print("viewdidload1")
         
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        print("viewDidAppear")
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        print("viewWillAppear")
+        
+    }
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(true)
+        print("viewWillDisappear")
+    }
     //错误处理
     func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error) {
         print("发生错误：\(error)")
@@ -91,7 +110,10 @@ class ViewController: UIViewController, WKUIDelegate, WKScriptMessageHandler,WKN
                     print(urlmessage)
                     let messagenote=Messagenote()
                     messagenote.httpGet(request: URLRequest(url: URL(string: urlmessage)!))
-                    
+                
+                    //通知推送
+                    let notificationfunction=Notificationfunction()
+                    notificationfunction.httpGet(request: URLRequest(url: URL(string: "https://www.oushelun.cn/customerajax/notificationjson/123")!))
                 }
             }
         }
@@ -150,6 +172,24 @@ class ViewController: UIViewController, WKUIDelegate, WKScriptMessageHandler,WKN
             
             UserDefaults.standard.set(message.body, forKey: "cusid")
             print("储存的用户id\(String(describing: UserDefaults.standard.string(forKey: "cusid")!))")
+            
+            let urlmessage:String!="https://www.oushelun.cn/cosmeticajax/curaddress/\(message.body)/\(UserDefaults.standard.string(forKey: "curaddress")!)"
+            let toSearchword = CFURLCreateStringByAddingPercentEscapes(nil, urlmessage! as CFString, nil, "!*'();@&=+$,?%#[]" as CFString, CFStringBuiltInEncodings.UTF8.rawValue)
+            print(toSearchword!)
+            let request = URLRequest(url: URL(string: toSearchword! as String)!)
+            let configuration = URLSessionConfiguration.default
+            
+            let session = URLSession(configuration: configuration,
+                                     delegate: self as? URLSessionDelegate, delegateQueue:OperationQueue.main)
+            
+           let dataTask = session.dataTask(with: request,
+                                            completionHandler: {(data, response, error) -> Void in
+                                                if error != nil{}else{
+                                                    print("数据")
+                                                    print(data as Any)
+                                                }})
+            //使用resume方法启动任务
+            dataTask.resume()
         }
         //预约倒计时
         if(message.name == "ioscountdown"){
@@ -162,4 +202,7 @@ class ViewController: UIViewController, WKUIDelegate, WKScriptMessageHandler,WKN
             
         }
     }
+    
+    
+    
 }
