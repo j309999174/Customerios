@@ -173,7 +173,8 @@ class ViewController: UIViewController, WKUIDelegate, WKScriptMessageHandler,WKN
             UserDefaults.standard.set(message.body, forKey: "cusid")
             print("储存的用户id\(String(describing: UserDefaults.standard.string(forKey: "cusid")!))")
             
-            let urlmessage:String!="https://www.oushelun.cn/cosmeticajax/curaddress/\(message.body)/\(UserDefaults.standard.string(forKey: "curaddress")!)"
+            //储存deviceToken
+            let urlmessage:String!="https://www.oushelun.cn/decorateajax/customertoken/\(message.body)/\(UserDefaults.standard.string(forKey: "deviceToken")!)"
             let toSearchword = CFURLCreateStringByAddingPercentEscapes(nil, urlmessage! as CFString, nil, "!*'();@&=+$,?%#[]" as CFString, CFStringBuiltInEncodings.UTF8.rawValue)
             print(toSearchword!)
             let request = URLRequest(url: URL(string: toSearchword! as String)!)
@@ -182,7 +183,7 @@ class ViewController: UIViewController, WKUIDelegate, WKScriptMessageHandler,WKN
             let session = URLSession(configuration: configuration,
                                      delegate: self as? URLSessionDelegate, delegateQueue:OperationQueue.main)
             
-           let dataTask = session.dataTask(with: request,
+            let dataTask = session.dataTask(with: request,
                                             completionHandler: {(data, response, error) -> Void in
                                                 if error != nil{}else{
                                                     print("数据")
@@ -190,6 +191,28 @@ class ViewController: UIViewController, WKUIDelegate, WKScriptMessageHandler,WKN
                                                 }})
             //使用resume方法启动任务
             dataTask.resume()
+            
+            
+            
+            
+            //登陆地址
+//            let urlmessage:String!="https://www.oushelun.cn/cosmeticajax/curaddress/\(message.body)/\(UserDefaults.standard.string(forKey: "curaddress")!)"
+//            let toSearchword = CFURLCreateStringByAddingPercentEscapes(nil, urlmessage! as CFString, nil, "!*'();@&=+$,?%#[]" as CFString, CFStringBuiltInEncodings.UTF8.rawValue)
+//            print(toSearchword!)
+//            let request = URLRequest(url: URL(string: toSearchword! as String)!)
+//            let configuration = URLSessionConfiguration.default
+//
+//            let session = URLSession(configuration: configuration,
+//                                     delegate: self as? URLSessionDelegate, delegateQueue:OperationQueue.main)
+//
+//           let dataTask = session.dataTask(with: request,
+//                                            completionHandler: {(data, response, error) -> Void in
+//                                                if error != nil{}else{
+//                                                    print("数据")
+//                                                    print(data as Any)
+//                                                }})
+//            //使用resume方法启动任务
+//            dataTask.resume()
         }
         //预约倒计时
         if(message.name == "ioscountdown"){

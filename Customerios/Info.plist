@@ -48,7 +48,7 @@
 		</dict>
 	</array>
 	<key>CFBundleVersion</key>
-	<string>2</string>
+	<string>5</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSAppTransportSecurity</key>
@@ -59,11 +59,15 @@
 	<key>NSCameraUsageDescription</key>
 	<string>开启相机权限才可以通过扫码对服务作出评价</string>
 	<key>NSLocationAlwaysUsageDescription</key>
-	<string>访问您的位置</string>
+	<string>开启定位权限才可以在预约界面选择当前地址</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>访问您的位置</string>
+	<string>开启定位权限才可以在预约界面选择当前地址</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>开启照片权限才可以选择并上传图片</string>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>remote-notification</string>
+	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
