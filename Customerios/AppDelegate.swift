@@ -253,7 +253,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
                     address.append(subThoroughfare)
                 }
                 if let name = p.name {
-                    address.append(name)
+                    //address.append(name)
                     print("地名：\(name)\n")
                 }
                 if let isoCountryCode = p.isoCountryCode {
