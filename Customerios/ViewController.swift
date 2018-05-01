@@ -196,23 +196,23 @@ class ViewController: UIViewController, WKUIDelegate, WKScriptMessageHandler,WKN
             
             
             //登陆地址
-//            let urlmessage:String!="https://www.oushelun.cn/cosmeticajax/curaddress/\(message.body)/\(UserDefaults.standard.string(forKey: "curaddress")!)"
-//            let toSearchword = CFURLCreateStringByAddingPercentEscapes(nil, urlmessage! as CFString, nil, "!*'();@&=+$,?%#[]" as CFString, CFStringBuiltInEncodings.UTF8.rawValue)
-//            print(toSearchword!)
-//            let request = URLRequest(url: URL(string: toSearchword! as String)!)
-//            let configuration = URLSessionConfiguration.default
-//
-//            let session = URLSession(configuration: configuration,
-//                                     delegate: self as? URLSessionDelegate, delegateQueue:OperationQueue.main)
-//
-//           let dataTask = session.dataTask(with: request,
-//                                            completionHandler: {(data, response, error) -> Void in
-//                                                if error != nil{}else{
-//                                                    print("数据")
-//                                                    print(data as Any)
-//                                                }})
-//            //使用resume方法启动任务
-//            dataTask.resume()
+            let urlmessage1:String!="https://www.oushelun.cn/cosmeticajax/curaddress/\(message.body)/\(UserDefaults.standard.string(forKey: "curaddress")!)"
+            let toSearchword1 = CFURLCreateStringByAddingPercentEscapes(nil, urlmessage1! as CFString, nil, "!*'();@&=+$,?%#[]" as CFString, CFStringBuiltInEncodings.UTF8.rawValue)
+            print(toSearchword1!)
+            let request1 = URLRequest(url: URL(string: toSearchword1! as String)!)
+            let configuration1 = URLSessionConfiguration.default
+
+            let session1 = URLSession(configuration: configuration1,
+                                     delegate: self as? URLSessionDelegate, delegateQueue:OperationQueue.main)
+
+           let dataTask1 = session1.dataTask(with: request1,
+                                            completionHandler: {(data, response, error) -> Void in
+                                                if error != nil{}else{
+                                                    print("数据")
+                                                    print(data as Any)
+                                                }})
+            //使用resume方法启动任务
+            dataTask1.resume()
         }
         //预约倒计时
         if(message.name == "ioscountdown"){
