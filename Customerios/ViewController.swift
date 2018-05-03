@@ -174,6 +174,7 @@ class ViewController: UIViewController, WKUIDelegate, WKScriptMessageHandler,WKN
             print("储存的用户id\(String(describing: UserDefaults.standard.string(forKey: "cusid")!))")
             
             //储存deviceToken
+            if UserDefaults.standard.string(forKey: "deviceToken") != nil {
             let urlmessage:String!="https://www.oushelun.cn/decorateajax/customertoken/\(message.body)/\(UserDefaults.standard.string(forKey: "deviceToken")!)"
             let toSearchword = CFURLCreateStringByAddingPercentEscapes(nil, urlmessage! as CFString, nil, "!*'();@&=+$,?%#[]" as CFString, CFStringBuiltInEncodings.UTF8.rawValue)
             print(toSearchword!)
@@ -191,8 +192,7 @@ class ViewController: UIViewController, WKUIDelegate, WKScriptMessageHandler,WKN
                                                 }})
             //使用resume方法启动任务
             dataTask.resume()
-            
-            
+            }
             
             var urlmessage1:String?
             //登陆地址
