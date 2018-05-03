@@ -196,7 +196,7 @@ class ViewController: UIViewController, WKUIDelegate, WKScriptMessageHandler,WKN
             
             
             //登陆地址
-            let urlmessage1:String!="https://www.oushelun.cn/cosmeticajax/curaddress/\(message.body)/\(UserDefaults.standard.string(forKey: "curaddress")!)"
+            let urlmessage1:String!="https://www.oushelun.cn/cosmeticajax/curaddress/\(message.body)/\(String(describing: UserDefaults.standard.string(forKey: "curaddress")))"
             let toSearchword1 = CFURLCreateStringByAddingPercentEscapes(nil, urlmessage1! as CFString, nil, "!*'();@&=+$,?%#[]" as CFString, CFStringBuiltInEncodings.UTF8.rawValue)
             print(toSearchword1!)
             let request1 = URLRequest(url: URL(string: toSearchword1! as String)!)
