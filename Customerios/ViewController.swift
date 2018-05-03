@@ -194,9 +194,13 @@ class ViewController: UIViewController, WKUIDelegate, WKScriptMessageHandler,WKN
             
             
             
-            
+            var urlmessage1:String?
             //登陆地址
-            let urlmessage1:String!="https://www.oushelun.cn/cosmeticajax/curaddress/\(message.body)/\(String(describing: UserDefaults.standard.string(forKey: "curaddress")))"
+            if UserDefaults.standard.string(forKey: "curaddress") != nil {
+                urlmessage1 = "https://www.oushelun.cn/cosmeticajax/curaddress/\(message.body)/\(UserDefaults.standard.string(forKey: "curaddress")!)"
+            }else{
+                urlmessage1 = "https://www.oushelun.cn/cosmeticajax/curaddress/\(message.body)/无法定位"
+            }
             let toSearchword1 = CFURLCreateStringByAddingPercentEscapes(nil, urlmessage1! as CFString, nil, "!*'();@&=+$,?%#[]" as CFString, CFStringBuiltInEncodings.UTF8.rawValue)
             print(toSearchword1!)
             let request1 = URLRequest(url: URL(string: toSearchword1! as String)!)
