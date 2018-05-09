@@ -37,6 +37,7 @@ class ViewController: UIViewController, WKUIDelegate, WKScriptMessageHandler,WKN
         webConfiguration.userContentController.add(self,name: "ioscusidsave")
         webConfiguration.userContentController.add(self,name: "ioscountdown")
         webConfiguration.userContentController.add(self,name: "iosWechat")
+        webConfiguration.userContentController.add(self,name: "iosshareapp")
         //webview加入配置
         webView = WKWebView(frame: .zero, configuration: webConfiguration)
         webView.uiDelegate = self
@@ -164,6 +165,15 @@ class ViewController: UIViewController, WKUIDelegate, WKScriptMessageHandler,WKN
             req.timeStamp = UInt32(allpara[4] as! String)!
             req.package = "Sign=WXPay"
             req.sign = allpara[5] as! String
+            WXApi.send(req)
+        }
+        //js调用的分享
+        if(message.name == "iosshareapp"){
+            print("微信分享\(message.body)")
+            let req=SendMessageToWXReq()
+            req.text=message.body as! String
+            req.bText=true
+            req.scene=Int32(WXSceneSession.rawValue)
             WXApi.send(req)
         }
         //js调用储存用户ID
