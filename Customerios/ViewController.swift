@@ -22,7 +22,7 @@ class ViewController: UIViewController, WKUIDelegate, WKScriptMessageHandler,WKN
     
     
     //默认首页
-    var passresut: String!="https://www.oushelun.cn/customer/homepage/123"
+    var passresut: String!="https://www.oushelun.cn/customer/homepage"
     override func loadView() {
         print("loadview")
         //创建配置

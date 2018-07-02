@@ -78,35 +78,35 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         
         
         
-        queue.async {
-            //播放
-//            let path = Bundle.main.path(forResource: "silence", ofType: "mp3")
-//            guard path != nil else { return }
-//            let asset = AVAsset(url: URL(fileURLWithPath: path!))
-//            let item = AVPlayerItem(asset: asset)
-//            self.player = AVPlayer(playerItem: item)
-//            self.player!.play()
-            print("1 秒后输出")
-            while(true){
-                sleep(8)
-                
-                //播放
-                //self.player!.seek(to: CMTimeMake(1, 1))
-                print("https://www.oushelun.cn/customerajax/unreadjsoncustomer/\(String(describing: UserDefaults.standard.string(forKey: "cusid")))")
-                //获取数据  顾客的消息推送,
-                
-                if ((UserDefaults.standard.string(forKey: "cusid")) != nil){
-                    let urlmessage:String!="https://www.oushelun.cn/customerajax/unreadjsoncustomer/\(String(describing: UserDefaults.standard.string(forKey: "cusid")!))"
-                    print(urlmessage)
-                    let messagenote=Messagenote()
-                    messagenote.httpGet(request: URLRequest(url: URL(string: urlmessage)!))
-                    //获取数据  通知的推送
-                    let notificationfunction=Notificationfunction()
-                    notificationfunction.httpGet(request: URLRequest(url: URL(string: "https://www.oushelun.cn/customerajax/notificationjson/123")!))
-                    
-                }
-            }
-        }
+//        queue.async {     去除本地通知
+//            //播放
+////            let path = Bundle.main.path(forResource: "silence", ofType: "mp3")
+////            guard path != nil else { return }
+////            let asset = AVAsset(url: URL(fileURLWithPath: path!))
+////            let item = AVPlayerItem(asset: asset)
+////            self.player = AVPlayer(playerItem: item)
+////            self.player!.play()
+//            print("1 秒后输出")
+//            while(true){
+//                sleep(8)
+//
+//                //播放
+//                //self.player!.seek(to: CMTimeMake(1, 1))
+//                print("https://www.oushelun.cn/customerajax/unreadjsoncustomer/\(String(describing: UserDefaults.standard.string(forKey: "cusid")))")
+//                //获取数据  顾客的消息推送,
+//
+//                if ((UserDefaults.standard.string(forKey: "cusid")) != nil){
+//                    let urlmessage:String!="https://www.oushelun.cn/customerajax/unreadjsoncustomer/\(String(describing: UserDefaults.standard.string(forKey: "cusid")!))"
+//                    print(urlmessage)
+//                    let messagenote=Messagenote()
+//                    messagenote.httpGet(request: URLRequest(url: URL(string: urlmessage)!))
+//                    //获取数据  通知的推送
+//                    let notificationfunction=Notificationfunction()
+//                    notificationfunction.httpGet(request: URLRequest(url: URL(string: "https://www.oushelun.cn/customerajax/notificationjson/123")!))
+//
+//                }
+//            }
+//        }
         
         //定位
         locationManager.delegate = self
