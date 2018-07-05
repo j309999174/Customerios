@@ -22,10 +22,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     //var player:AVPlayer?
     
     //定位
-    let locationManager = CLLocationManager()
-    var currentLocation:CLLocation!
-    var lock = NSLock()
-    var addressstring:String = ""
+//    let locationManager = CLLocationManager()
+//    var currentLocation:CLLocation!
+//    var lock = NSLock()
+//    var addressstring:String = ""
     
     //后台任务
     var backgroundTask:UIBackgroundTaskIdentifier! = nil
@@ -109,15 +109,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
 //        }
         
         //定位
-        locationManager.delegate = self
-        locationManager.desiredAccuracy = kCLLocationAccuracyBest //定位精确度（最高）一般有电源接入，比较耗电
-        //kCLLocationAccuracyNearestTenMeters;                    //精确到10米
-        locationManager.distanceFilter = 50                       //设备移动后获得定位的最小距离（适合用来采集运动的定位）
-        locationManager.requestWhenInUseAuthorization()           //弹出用户授权对话框，使用程序期间授权（ios8后)
-        //requestAlwaysAuthorization;                             //始终授权
-        locationManager.startUpdatingLocation()
-        print("开始定位》》》")
-        print("application1")
+//        locationManager.delegate = self
+//        locationManager.desiredAccuracy = kCLLocationAccuracyBest //定位精确度（最高）一般有电源接入，比较耗电
+//        //kCLLocationAccuracyNearestTenMeters;                    //精确到10米
+//        locationManager.distanceFilter = 50                       //设备移动后获得定位的最小距离（适合用来采集运动的定位）
+//        locationManager.requestWhenInUseAuthorization()           //弹出用户授权对话框，使用程序期间授权（ios8后)
+//        //requestAlwaysAuthorization;                             //始终授权
+//        locationManager.startUpdatingLocation()
+//        print("开始定位》》》")
+//        print("application1")
         
         return true
         
@@ -189,101 +189,101 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     
     //定位
     //委托传回定位，获取最后一个
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        lock.lock()
-        currentLocation = locations.last                        //注意：获取集合中最后一个位置（最新的位置）
-        print("定位经纬度为：\(currentLocation.coordinate.latitude)")
-        //一直发生定位错误输出结果为0：原因是我输出的是currentLocation.altitude(表示高度的)而不是currentLoction.coordinate.latitude（这个才是纬度）
-        print(currentLocation.coordinate.longitude)
-        lock.unlock()
-        reverseGeocode(latitude:currentLocation.coordinate.latitude,longitude: currentLocation.coordinate.longitude)
-        
-        
-    }
-    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
-        print("定位出错拉！！\(error)")
-    }
+//    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+//        lock.lock()
+//        currentLocation = locations.last                        //注意：获取集合中最后一个位置（最新的位置）
+//        print("定位经纬度为：\(currentLocation.coordinate.latitude)")
+//        //一直发生定位错误输出结果为0：原因是我输出的是currentLocation.altitude(表示高度的)而不是currentLoction.coordinate.latitude（这个才是纬度）
+//        print(currentLocation.coordinate.longitude)
+//        lock.unlock()
+//        reverseGeocode(latitude:currentLocation.coordinate.latitude,longitude: currentLocation.coordinate.longitude)
+//
+//
+//    }
+//    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+//        print("定位出错拉！！\(error)")
+//    }
     
     //地理信息反编码
-    func reverseGeocode( latitude:CLLocationDegrees, longitude:CLLocationDegrees){
-        let geocoder = CLGeocoder()
-        let currentLocation = CLLocation(latitude: latitude, longitude: longitude)
-        geocoder.reverseGeocodeLocation(currentLocation, completionHandler: {
-            (placemarks:[CLPlacemark]?, error:Error?) -> Void in
-            //强制转成简体中文
-            let array = NSArray(object: "zh-hans")
-            UserDefaults.standard.set(array, forKey: "AppleLanguages")
-            //显示所有信息
-            if error != nil {
-                //print("错误：\(error.localizedDescription))")
-                //self.textView.text = "错误：\(error!.localizedDescription))"
-                return
-            }
-            
-            if let p = placemarks?[0]{
-                print(p) //输出反编码信息
-                var address = ""
-                
-                if let country = p.country {
-                    //address.append("国家：\(country)\n")
-                    print("国家：\(country)\n")
-                }
-                if let administrativeArea = p.administrativeArea {
-                    //address.append("省份：\(administrativeArea)\n")
-                    print("省份：\(administrativeArea)\n")
-                }
-                if let subAdministrativeArea = p.subAdministrativeArea {
-                    //address.append("其他行政区域信息（自治区等）：\(subAdministrativeArea)\n")
-                    print("其他行政区域信息（自治区等）：\(subAdministrativeArea)\n")
-                }
-                if let locality = p.locality {
-                    //address.append("城市：\(locality)\n")
-                    address.append(locality)
-                }
-                if let subLocality = p.subLocality {
-                    //address.append("区划：\(subLocality)\n")
-                    address.append(subLocality)
-                }
-                if let thoroughfare = p.thoroughfare {
-                    //address.append("街道：\(thoroughfare)\n")
-                    address.append(thoroughfare)
-                }
-                if let subThoroughfare = p.subThoroughfare {
-                    //address.append("门牌：\(subThoroughfare)\n")
-                    address.append(subThoroughfare)
-                }
-                if let name = p.name {
-                    //address.append(name)
-                    print("地名：\(name)\n")
-                }
-                if let isoCountryCode = p.isoCountryCode {
-                    //address.append("国家编码：\(isoCountryCode)\n")
-                    print("国家编码：\(isoCountryCode)\n")
-                }
-                if let postalCode = p.postalCode {
-                    //address.append("邮编：\(postalCode)\n")
-                    print("邮编：\(postalCode)\n")
-                }
-                if let areasOfInterest = p.areasOfInterest {
-                    //address.append("关联的或利益相关的地标：\(areasOfInterest)\n")
-                    print("关联的或利益相关的地标：\(areasOfInterest)\n")
-                }
-                if let ocean = p.ocean {
-                    //address.append("海洋：\(ocean)\n")
-                    print("海洋：\(ocean)\n")
-                }
-                if let inlandWater = p.inlandWater {
-                    //address.append("水源，湖泊：\(inlandWater)\n")
-                    print("水源，湖泊：\(inlandWater)\n")
-                }
-                
-                UserDefaults.standard.set(address, forKey: "curaddress")
-                print("地址是\(address)")
-            } else {
-                print("No placemarks!")
-            }
-        })
-    }
+//    func reverseGeocode( latitude:CLLocationDegrees, longitude:CLLocationDegrees){
+//        let geocoder = CLGeocoder()
+//        let currentLocation = CLLocation(latitude: latitude, longitude: longitude)
+//        geocoder.reverseGeocodeLocation(currentLocation, completionHandler: {
+//            (placemarks:[CLPlacemark]?, error:Error?) -> Void in
+//            //强制转成简体中文
+//            let array = NSArray(object: "zh-hans")
+//            UserDefaults.standard.set(array, forKey: "AppleLanguages")
+//            //显示所有信息
+//            if error != nil {
+//                //print("错误：\(error.localizedDescription))")
+//                //self.textView.text = "错误：\(error!.localizedDescription))"
+//                return
+//            }
+//
+//            if let p = placemarks?[0]{
+//                print(p) //输出反编码信息
+//                var address = ""
+//
+//                if let country = p.country {
+//                    //address.append("国家：\(country)\n")
+//                    print("国家：\(country)\n")
+//                }
+//                if let administrativeArea = p.administrativeArea {
+//                    //address.append("省份：\(administrativeArea)\n")
+//                    print("省份：\(administrativeArea)\n")
+//                }
+//                if let subAdministrativeArea = p.subAdministrativeArea {
+//                    //address.append("其他行政区域信息（自治区等）：\(subAdministrativeArea)\n")
+//                    print("其他行政区域信息（自治区等）：\(subAdministrativeArea)\n")
+//                }
+//                if let locality = p.locality {
+//                    //address.append("城市：\(locality)\n")
+//                    address.append(locality)
+//                }
+//                if let subLocality = p.subLocality {
+//                    //address.append("区划：\(subLocality)\n")
+//                    address.append(subLocality)
+//                }
+//                if let thoroughfare = p.thoroughfare {
+//                    //address.append("街道：\(thoroughfare)\n")
+//                    address.append(thoroughfare)
+//                }
+//                if let subThoroughfare = p.subThoroughfare {
+//                    //address.append("门牌：\(subThoroughfare)\n")
+//                    address.append(subThoroughfare)
+//                }
+//                if let name = p.name {
+//                    //address.append(name)
+//                    print("地名：\(name)\n")
+//                }
+//                if let isoCountryCode = p.isoCountryCode {
+//                    //address.append("国家编码：\(isoCountryCode)\n")
+//                    print("国家编码：\(isoCountryCode)\n")
+//                }
+//                if let postalCode = p.postalCode {
+//                    //address.append("邮编：\(postalCode)\n")
+//                    print("邮编：\(postalCode)\n")
+//                }
+//                if let areasOfInterest = p.areasOfInterest {
+//                    //address.append("关联的或利益相关的地标：\(areasOfInterest)\n")
+//                    print("关联的或利益相关的地标：\(areasOfInterest)\n")
+//                }
+//                if let ocean = p.ocean {
+//                    //address.append("海洋：\(ocean)\n")
+//                    print("海洋：\(ocean)\n")
+//                }
+//                if let inlandWater = p.inlandWater {
+//                    //address.append("水源，湖泊：\(inlandWater)\n")
+//                    print("水源，湖泊：\(inlandWater)\n")
+//                }
+//
+//                UserDefaults.standard.set(address, forKey: "curaddress")
+//                print("地址是\(address)")
+//            } else {
+//                print("No placemarks!")
+//            }
+//        })
+//    }
     
     
 }

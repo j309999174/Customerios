@@ -17,7 +17,6 @@
 		0502C1BB201D93CB009A78B8 /* AVCaptureSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0502C1A8201D93CB009A78B8 /* AVCaptureSessionManager.swift */; };
 		0502C1BC201D93CB009A78B8 /* UIImage+ZZYQRCodeImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0502C1A9201D93CB009A78B8 /* UIImage+ZZYQRCodeImage.swift */; };
 		0502C1BD201D93CB009A78B8 /* ZZYQRCode.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0502C1AA201D93CB009A78B8 /* ZZYQRCode.bundle */; };
-		0546B18D20770B2B00950392 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0546B18C20770B2B00950392 /* CoreLocation.framework */; };
 		0546B1912077387600950392 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0546B1902077387600950392 /* MapKit.framework */; };
 		0568586A204B15AA009FD16E /* htmlerror in Resources */ = {isa = PBXBuildFile; fileRef = 05685869204B15AA009FD16E /* htmlerror */; };
 		059BF543200F1EAE0058F057 /* silence.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 059BF542200F1EAE0058F057 /* silence.mp3 */; };
@@ -124,7 +123,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				0546B1912077387600950392 /* MapKit.framework in Frameworks */,
-				0546B18D20770B2B00950392 /* CoreLocation.framework in Frameworks */,
 				05E6C9EE205C4DD20031C3B9 /* libsqlite3.0.tbd in Frameworks */,
 				05E6C9EB205C4C0B0031C3B9 /* libWeChatSDK.a in Frameworks */,
 				05F880A3200FB7B60008C0EE /* libz.tbd in Frameworks */,

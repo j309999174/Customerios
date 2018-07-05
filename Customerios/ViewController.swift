@@ -12,7 +12,7 @@ import JavaScriptCore
 import UserNotifications
 import AVFoundation
 import MediaPlayer
-
+import Photos
 
 class ViewController: UIViewController, WKUIDelegate, WKScriptMessageHandler,WKNavigationDelegate{
     var webView: WKWebView!
@@ -45,12 +45,38 @@ class ViewController: UIViewController, WKUIDelegate, WKScriptMessageHandler,WKN
         view = webView
     }
     
+    func checkPermission() {
+        let photoAuthorizationStatus = PHPhotoLibrary.authorizationStatus()
+        switch photoAuthorizationStatus {
+        case .authorized:
+            print("Access is granted by user")
+        case .notDetermined:
+            PHPhotoLibrary.requestAuthorization({
+                (newStatus) in
+                print("status is \(newStatus)")
+                if newStatus ==  PHAuthorizationStatus.authorized {
+                    /* do stuff here */
+                    print("success")
+                }
+            })
+            print("It is not determined until now")
+        case .restricted:
+            // same same
+            print("User do not have access to photo album.")
+        case .denied:
+            // same same
+            print("User has denied the permission.")
+        }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         print("viewdidload")
         
         
         self.navigationController?.setNavigationBarHidden(true,animated: false)
+        
+        //判断相册权限
+        //checkPermission()
         //链接改为扫描后的的值
         myURL = URL(string: passresut)
         //let myURL = URL(string: "http://172.114.10.238/customer/homepage/123")
@@ -204,29 +230,29 @@ class ViewController: UIViewController, WKUIDelegate, WKScriptMessageHandler,WKN
             dataTask.resume()
             }
             
-            var urlmessage1:String?
-            //登陆地址
-            if UserDefaults.standard.string(forKey: "curaddress") != nil {
-                urlmessage1 = "https://www.oushelun.cn/cosmeticajax/curaddress/\(message.body)/\(UserDefaults.standard.string(forKey: "curaddress")!)"
-            }else{
-                urlmessage1 = "https://www.oushelun.cn/cosmeticajax/curaddress/\(message.body)/无法定位"
-            }
-            let toSearchword1 = CFURLCreateStringByAddingPercentEscapes(nil, urlmessage1! as CFString, nil, "!*'();@&=+$,?%#[]" as CFString, CFStringBuiltInEncodings.UTF8.rawValue)
-            print(toSearchword1!)
-            let request1 = URLRequest(url: URL(string: toSearchword1! as String)!)
-            let configuration1 = URLSessionConfiguration.default
-
-            let session1 = URLSession(configuration: configuration1,
-                                     delegate: self as? URLSessionDelegate, delegateQueue:OperationQueue.main)
-
-           let dataTask1 = session1.dataTask(with: request1,
-                                            completionHandler: {(data, response, error) -> Void in
-                                                if error != nil{}else{
-                                                    print("数据")
-                                                    print(data as Any)
-                                                }})
-            //使用resume方法启动任务
-            dataTask1.resume()
+//            var urlmessage1:String?
+//            //登陆地址
+//            if UserDefaults.standard.string(forKey: "curaddress") != nil {
+//                urlmessage1 = "https://www.oushelun.cn/cosmeticajax/curaddress/\(message.body)/\(UserDefaults.standard.string(forKey: "curaddress")!)"
+//            }else{
+//                urlmessage1 = "https://www.oushelun.cn/cosmeticajax/curaddress/\(message.body)/无法定位"
+//            }
+//            let toSearchword1 = CFURLCreateStringByAddingPercentEscapes(nil, urlmessage1! as CFString, nil, "!*'();@&=+$,?%#[]" as CFString, CFStringBuiltInEncodings.UTF8.rawValue)
+//            print(toSearchword1!)
+//            let request1 = URLRequest(url: URL(string: toSearchword1! as String)!)
+//            let configuration1 = URLSessionConfiguration.default
+//
+//            let session1 = URLSession(configuration: configuration1,
+//                                     delegate: self as? URLSessionDelegate, delegateQueue:OperationQueue.main)
+//
+//           let dataTask1 = session1.dataTask(with: request1,
+//                                            completionHandler: {(data, response, error) -> Void in
+//                                                if error != nil{}else{
+//                                                    print("数据")
+//                                                    print(data as Any)
+//                                                }})
+//            //使用resume方法启动任务
+//            dataTask1.resume()
         }
         //预约倒计时
         if(message.name == "ioscountdown"){
